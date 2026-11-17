@@ -14,3 +14,16 @@ if (carousel) {
     carousel.scrollBy({ left: 260, behavior: "smooth" });
   });
 }
+
+if (carousel) {
+  const premierItem = document.querySelector(".carousel__item");
+  const scrollAmount = premierItem.clientWidth;
+
+  prevButton.addEventListener("click", () => {
+    carousel.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+  });
+
+  nextButton.addEventListener("click", () => {
+    carousel.scrollBy({ left: scrollAmount, behavior: "smooth" });
+  });
+}
