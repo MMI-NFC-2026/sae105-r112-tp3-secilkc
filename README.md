@@ -1,5 +1,5 @@
-- nom :
-- prénom :
+- nom : AKCA
+- prénom : Seçil
 - URL Netlify :
 
 # Travail
