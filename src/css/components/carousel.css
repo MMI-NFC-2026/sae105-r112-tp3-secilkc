@@ -56,3 +56,11 @@ Les margin négatifs à gauche et à droite corresponde à l'éespace entre le n
 .carousel__item img {
   display: block;
 }
+
+.carousel__anchors {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+}
