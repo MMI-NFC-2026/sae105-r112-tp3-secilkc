@@ -1,28 +1,24 @@
-/* Limite la largeur maximale de l'image à 100% de son conteneur - https://developer.mozilla.org/fr/docs/Web/CSS/max-width */
-/* Ajuste la hauteur de l'image automatiquement pour conserver les proportions - https://developer.mozilla.org/fr/docs/Web/CSS/height */
 img {
   max-width: 100%;
   height: auto;
 }
 
-/* Mise en forme du carousel en CSS.
-Utiliser flex pour positionner les item du carousel les uns à coté des autres.
-La propriété "overflow-x" avec la valeur "scroll" permet rogner le contenu afin de tenir horizontalement dans la boîte de remplissage et d'ajouter un scroll horizontal si le contenu déborde.
-https://developer.mozilla.org/fr/docs/Web/CSS/overflow-x
-
-La propriété "scroll-snap-type" définit la force d'adhérence aux points d'accroche en cas de défilement d'un conteneur
-https://developer.mozilla.org/fr/docs/Web/CSS/scroll-snap-type
-
-Les margin négatifs à gauche et à droite corresponde à l'éespace entre le navigateur et le début du contenu, de sorte que le carousel soit collé au bords de l'écran.
-
-*/
+.carousel {
+  position: relative;
+}
 
 .carousel__controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
   display: flex;
-  gap: 16px;
   align-items: center;
-  justify-content: center;
-  margin: 16px 0;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0 16px;
+  pointer-events: none;
 }
 
 .carousel__button {
@@ -33,6 +29,8 @@ Les margin négatifs à gauche et à droite corresponde à l'éespace entre le n
   justify-content: center;
   border: 1px solid;
   border-radius: 50%;
+  background: white;
+  pointer-events: auto;
 }
 
 .carousel__button--prev {
